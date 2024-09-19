@@ -1,0 +1,24 @@
+<div class="department-table-container"></div>
+  <h2>Departments List</h2>
+  <table class="department-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>HeadOfDepartment</th>
+        <th>ContactNumber</th>
+        <th>Doctors</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (department of departments; track department) {
+          <tr>
+              <td>{{ department.id }}</td>
+              <td>{{ department.name }}</td>
+              <td>{{ department.headOfDepartment }}</td>
+              <td>{{ department.contactNumber }}</td>
+              <td>{{ department.doctors }}</td>
+            </tr>
+      }
+    </tbody>
+  </table>

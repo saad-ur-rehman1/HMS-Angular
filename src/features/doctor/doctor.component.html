@@ -1,0 +1,29 @@
+<div class="doctor-table-container">
+  <h2>Doctors List</h2>
+  <table class="doctor-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Experience</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>DepartmentId</th>
+        <th>Specializations</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (doctor of doctors; track doctor) {
+          <tr>
+              <td>{{ doctor.id }}</td>
+              <td>{{ doctor.name }}</td>
+              <td>{{ doctor.experience }}</td>
+              <td>{{ doctor.contactNumber }}</td>
+              <td>{{ doctor.email }}</td>
+              <td>{{ doctor.departmentId }}</td>
+              <td>{{ doctor.specializations }}</td>
+            </tr>
+      }
+    </tbody>
+  </table>
+</div>

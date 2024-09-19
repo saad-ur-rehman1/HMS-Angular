@@ -1,0 +1,29 @@
+<div class="patient-table-container"></div>
+  <h2>Patients List</h2>
+  <table class="patient-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>ContactNumber</th>
+        <th>DoctorId</th>
+        <th>AddressId</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (patient of patients; track patient) {
+          <tr>
+              <td>{{ patient.id }}</td>
+              <td>{{ patient.name }}</td>
+              <td>{{ patient.age }}</td>
+              <td>{{ patient.gender }}</td>
+              <td>{{ patient.contactNumber }}</td>
+              <td>{{ patient.doctorId }}</td>
+              <td>{{ patient.addressId }}</td>
+            </tr>
+      }
+    </tbody>
+  </table>
+  

@@ -1,0 +1,51 @@
+/* Container for the patient table */
+.patient-table-container {
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Heading style */
+.patient-table-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.patient-table thead {
+    background-color: #FFC107;
+    color: #fff;
+}
+
+.patient-table th, .patient-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.patient-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.patient-table tbody tr:hover {
+    background-color: #fffde7;
+}
+
+.patient-table th {
+    font-size: 16px;
+}
+
+.patient-table td {
+    font-size: 14px;
+    color: #333;
+}

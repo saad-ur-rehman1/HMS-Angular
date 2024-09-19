@@ -1,0 +1,30 @@
+.billing-table-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .billing-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .billing-table th, .billing-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .billing-table th {
+    background-color: #7b0569;
+    color: white;
+  }
+  
+  .billing-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .billing-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }

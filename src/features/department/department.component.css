@@ -1,0 +1,57 @@
+/* Container for the department table */
+.department-table-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Heading style */
+.department-table-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+.department-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.department-table thead {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.department-table th, .department-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.department-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.department-table tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+.department-table th {
+    font-size: 16px;
+}
+
+.department-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Doctor names styling */
+.department-table .doctor-names {
+    color: #2196F3;
+    font-weight: bold;
+}
