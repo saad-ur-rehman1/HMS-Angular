@@ -1,0 +1,28 @@
+<div class="admin-actions">
+  <button class="create-admin-btn" [routerLink]="['/admin/create']">Create Admin</button>
+</div>
+
+<table class="admin-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let admin of admins">
+      <td>{{ admin.id }}</td>
+      <td>{{ admin.name }}</td>
+      <td>{{ admin.email }}</td>
+      <td>{{ admin.role }}</td>
+      <td>
+        <button class="action-btn view">View</button>
+        <button class="action-btn edit">Edit</button>
+        <button class="action-btn delete">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { ADMINS } from "../app/constants/seeds";
 
 @Injectable({
   providedIn: 'root'  
@@ -6,7 +7,14 @@ import { Injectable } from "@angular/core";
 export class SeedsService {
 
     // Existing methods
-    public GetDoctors(): object {
+    public GetAdmins(): IAdmin[] {
+      return ADMINS;
+   }
+   
+   public AddAdmin(admin: IAdmin):  void {
+      ADMINS.push(admin);;
+   }
+    public GetDoctors(): IDoctors[] {
         const doctors = [
           {
             id: 1,
@@ -15,7 +23,7 @@ export class SeedsService {
             contactNumber: '123-456-7890',
             email: 'ahmed@example.com',
             departmentId: 1,
-            specializations: ['Cardiology', 'Internal Medicine']
+            specializations: 'Cardiology, Internal Medicine'
           },
           {
             id: 2,
@@ -24,7 +32,7 @@ export class SeedsService {
             contactNumber: '098-765-4321',
             email: 'fatima@example.com',
             departmentId: 2,
-            specializations: ['Neurology', 'Neurosurgery']
+            specializations: 'Neurology, Neurosurgery'
           },
           {
             id: 3,
@@ -33,7 +41,7 @@ export class SeedsService {
             contactNumber: '111-222-3333',
             email: 'ali@example.com',
             departmentId: 3,
-            specializations: ['Pediatrics']
+            specializations: 'Pediatrics'
           },
           {
             id: 4,
@@ -42,13 +50,13 @@ export class SeedsService {
             contactNumber: '555-666-7777',
             email: 'sarah@example.com',
             departmentId: 1,
-            specializations: ['Cardiology']
+            specializations: 'Cardiology'
           }
         ];
         return doctors;
     }
 
-    public GetPatients(): object {
+    public GetPatients(): IPatient[] {
         const patients = [
           {
             id: 1,
@@ -81,44 +89,37 @@ export class SeedsService {
         return patients;
     }
 
-    public GetDepartments(): object {
+    public GetDepartments(): IDepartments[] {
         const departments = [
           {
             id: 1,
             name: 'Cardiology',
             headOfDepartment: 'Dr. Ahmed',
             contactNumber: '123-456-0000',
-            doctors: [
-              { name: 'Dr. Ahmed' },
-              { name: 'Dr. Sarah' }
-            ]
+            doctors: 
+              'name: Dr. Ahmad, name: Dr. Sarah'
+            
           },
           {
             id: 2,
             name: 'Neurology',
             headOfDepartment: 'Dr. Fatima',
             contactNumber: '987-654-0000',
-            doctors: [
-              { name: 'Dr. Fatima' },
-              { name: 'Dr. Farhan' }
-            ]
+            doctors: 'name: Dr. Fatima, name: Dr. Farhan'
           },
           {
             id: 3,
             name: 'Pediatrics',
             headOfDepartment: 'Dr. Ali',
             contactNumber: '222-333-0000',
-            doctors: [
-              { name: 'Dr. Ali' },
-              { name: 'Dr. Shumaila' }
-            ]
+            doctors: 'name: Dr. Ali, name: Dr. Shumaila'
           }
         ];
         return departments;
     }
 
     // New methods for Billing and Appointment
-    public GetBillings(): object {
+    public GetBillings(): IBillings[] {
         const billings = [
           {
             id: 1,
@@ -145,7 +146,7 @@ export class SeedsService {
         return billings;
     }
 
-    public GetAppointments(): object {
+    public GetAppointments(): IAppointments[] {
         const appointments = [
           {
             id: 1,
@@ -171,4 +172,51 @@ export class SeedsService {
         ];
         return appointments;
     }
+}
+export interface IDoctors{
+            id: number,
+            name: string,
+            experience: number,
+            contactNumber: string,
+            email: string,
+            departmentId: number,
+            specializations: string
+}
+export interface IPatient{
+            id: number,
+            name: string,
+            age: number,
+            gender: string,
+            contactNumber: string,
+            doctorId: number,
+            addressId: number
+            
+}
+export interface IDepartments{
+  id: number,
+  name: string,
+  headOfDepartment: string,
+  contactNumber: string,
+  doctors: string
+
+}
+export interface IBillings{
+  id: number,
+  patientId: number,
+  doctorId: number,
+  amount: number,
+  billingDate: string
+}
+export interface IAppointments{
+            id: number,
+            patientId: number,
+            doctorId: number,
+            appointmentDate: string,
+            purpose: string
+}
+export interface IAdmin {
+  id: number;
+  name: string;
+  email: string;
+  role: string;
 }

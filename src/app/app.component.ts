@@ -6,13 +6,15 @@ import { PatientComponent } from '../features/patient/patient.component';
 import { DepartmentComponent } from '../features/department/department.component';
 import { AppointmentComponent } from '../features/appointment/appointment.component';
 import { BillingComponent } from '../features/billing/billing.component';
+import { AdminComponent } from '../features/admin/admin.component';
+import { AdminCreateComponent } from '../features/admin-create/admin-create.component';
 
 
 
 @Component({
   selector: 'app-root',
   
-  imports: [RouterOutlet, CommonModule,RouterLink, RouterLinkActive, DoctorComponent, PatientComponent, DepartmentComponent, AppointmentComponent, BillingComponent ],
+  imports: [RouterOutlet, CommonModule,RouterLink, RouterLinkActive, DoctorComponent, PatientComponent, DepartmentComponent, AppointmentComponent, BillingComponent,AdminComponent,AdminCreateComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
