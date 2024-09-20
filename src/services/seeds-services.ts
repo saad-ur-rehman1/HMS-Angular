@@ -6,6 +6,10 @@ import { ADMINS } from "../app/constants/seeds";
 })
 export class SeedsService {
 
+  public GetBooks(): IBook[] {
+    return BOOKS;
+ }
+
     // Existing methods
     public GetAdmins(): IAdmin[] {
       return ADMINS;
@@ -219,4 +223,15 @@ export interface IAdmin {
   name: string;
   email: string;
   role: string;
+}
+
+export interface IBook {
+  id: string;
+  title: string;
+  author: string;
+  genre: string;
+  yearPublished: number;
+  checkedOut: boolean;
+  isPermanentCollection: boolean;
+  createdAt: string;
 }
