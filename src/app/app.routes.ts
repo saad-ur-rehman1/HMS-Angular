@@ -2,20 +2,15 @@ import { Routes } from '@angular/router';
 import { DoctorComponent } from '../features/doctor/doctor.component';
 import { DepartmentComponent } from '../features/department/department.component';
 import { PatientComponent } from '../features/patient/patient.component';
+//import { NotFoundComponent } from '../features/not-found/not-found.component';
 import { AppointmentComponent } from '../features/appointment/appointment.component';
 import { BillingComponent } from '../features/billing/billing.component';
-import { AdminComponent } from '../features/admin/admin.component';
-import { AdminCreateComponent } from '../features/admin-create/admin-create.component';
-import { BookComponent } from '../features/book/book.component';
 
 export const routes: Routes = [
     { path: 'doctor', component: DoctorComponent },
     { path: 'patient', component: PatientComponent },
     { path: 'department', component: DepartmentComponent },
     { path: 'appointment', component: AppointmentComponent },
-    { path: 'billing', component: BillingComponent },
-    {path: 'admin', component: AdminComponent},
-    {path: 'admin-create', component: AdminCreateComponent},
-    {path: 'book', component: BookComponent}
-
+    { path: 'billing', component: BillingComponent }
+    //{ path: '**', component: NotFoundComponent }
 ];

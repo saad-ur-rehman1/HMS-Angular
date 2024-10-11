@@ -6,18 +6,18 @@ import { ADMINS } from "../app/constants/seeds";
 })
 export class SeedsService {
 
-  public GetBooks(): IBook[] {
-    return BOOKS;
- }
+//   public GetBooks(): IBook[] {
+//     return BOOKS;
+ 
 
-    // Existing methods
-    public GetAdmins(): IAdmin[] {
-      return ADMINS;
-   }
+//     // Existing methods
+//     public GetAdmins(): IAdmin[] {
+//       return ADMINS;
+//    }
    
-   public AddAdmin(admin: IAdmin):  void {
-      ADMINS.push(admin);;
-   }
+//    public AddAdmin(admin: IAdmin):  void {
+//       ADMINS.push(admin);;
+//    }
     public GetDoctors(): IDoctors[] {
         const doctors = [
           {
